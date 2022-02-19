@@ -14,9 +14,9 @@ class Home extends StatelessWidget {
         appBar: AppBar(
           leading: IconButton(
             onPressed: () {
-              Provider.of<ExampleProvider>(context).height =
+              Provider.of<ExampleProvider>(context, listen: false).height =
                   Random().nextInt(300).toDouble();
-              Provider.of<ExampleProvider>(context).width =
+              Provider.of<ExampleProvider>(context, listen: false).width =
                   Random().nextInt(300).toDouble();
             },
             icon: const Icon(Icons.flutter_dash),
